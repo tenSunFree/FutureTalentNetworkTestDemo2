@@ -4,6 +4,7 @@
     package="com.home.futuretalentnetworktestdemo2">
 
     <application
+       android:name=".common.FTNTDApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -12,7 +13,7 @@
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
 
-        <activity android:name=".list.ListActivity">
+        <activity android:name=".list.view.ListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

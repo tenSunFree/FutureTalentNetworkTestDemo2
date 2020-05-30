@@ -1,4 +1,4 @@
-package com.home.futuretalentnetworktestdemo2.list
+package com.home.futuretalentnetworktestdemo2.list.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
