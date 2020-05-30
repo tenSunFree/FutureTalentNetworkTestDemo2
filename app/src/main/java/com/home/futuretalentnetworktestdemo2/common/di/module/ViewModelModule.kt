@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.home.futuretalentnetworktestdemo2.common.di.other.ViewModelFactory
 import com.home.futuretalentnetworktestdemo2.common.di.other.ViewModelKey
+import com.home.futuretalentnetworktestdemo2.detail.viewmodel.DetailViewModel
 import com.home.futuretalentnetworktestdemo2.list.viewmodel.ListViewModel
 import dagger.Binds
 import dagger.Module
@@ -19,4 +20,9 @@ abstract class ViewModelModule {
     @IntoMap
     @ViewModelKey(ListViewModel::class)
     abstract fun bindListViewModel(listViewModel: ListViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(DetailViewModel::class)
+    abstract fun bindDetailViewModel(detailViewModel: DetailViewModel): ViewModel
 }

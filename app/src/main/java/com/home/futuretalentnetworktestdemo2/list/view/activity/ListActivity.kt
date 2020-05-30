@@ -10,6 +10,7 @@ import com.home.futuretalentnetworktestdemo2.R
 import com.home.futuretalentnetworktestdemo2.common.base.BaseActivity
 import com.home.futuretalentnetworktestdemo2.common.extension.setShapeBackground
 import com.home.futuretalentnetworktestdemo2.databinding.ActivityListBinding
+import com.home.futuretalentnetworktestdemo2.detail.view.activity.DetailActivity
 import com.home.futuretalentnetworktestdemo2.list.model.viewdata.ListViewData
 import com.home.futuretalentnetworktestdemo2.list.model.viewstate.ListViewState
 import com.home.futuretalentnetworktestdemo2.list.model.viewstate.Loading
@@ -78,6 +79,11 @@ class ListActivity : BaseActivity() {
 
     private fun showSuccess(data: ListViewData) {
         val adapter = ListAdapter()
+        adapter.setOnItemClickListener = { login ->
+            val bundle = Bundle()
+            bundle.putString(getString(R.string.activity_list_key_user_name), login)
+            DetailActivity.start(this, bundle)
+        }
         adapter.updateList(data.list.toMutableList())
         binding.recyclerView.setHasFixedSize(true)
         binding.recyclerView.adapter = adapter
