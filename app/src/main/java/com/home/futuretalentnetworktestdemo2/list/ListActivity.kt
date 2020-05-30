@@ -1,7 +1,8 @@
-package com.home.futuretalentnetworktestdemo2
+package com.home.futuretalentnetworktestdemo2.list
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.home.futuretalentnetworktestdemo2.R
 
 class ListActivity : AppCompatActivity() {
 

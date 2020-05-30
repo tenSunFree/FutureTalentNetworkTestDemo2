@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">FutureTalentNetworkTestDemo2</string>
+    <string name="activity_list_title">List</string>
+    <string name="activity_detail_title">Detail</string>
+    <string name="activity_pagination_title">Pagination</string>
+    <string name="activity_list_key_user_name">login</string>
+    <string name="activity_detail_staff">STAFF</string>
 </resources>
