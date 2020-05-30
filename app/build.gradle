@@ -9,11 +9,10 @@ android {
 
     defaultConfig {
         applicationId "com.home.futuretalentnetworktestdemo2"
-        minSdkVersion 23
+        minSdkVersion 24
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -64,4 +63,15 @@ dependencies {
 
     // material
     implementation 'com.google.android.material:material:1.1.0'
+
+    // lifecycle
+    def lifecycle_version = "2.1.0"
+    // noinspection GradleDependency
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
+    kapt "androidx.lifecycle:lifecycle-common-java8:$lifecycle_version"
+    // noinspection GradleDependency
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+
+    // coil
+    implementation 'io.coil-kt:coil:0.9.4'
 }

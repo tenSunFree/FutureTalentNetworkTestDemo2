@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.home.futuretalentnetworktestdemo2">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
        android:name=".common.FTNTDApplication"
         android:allowBackup="true"
@@ -13,7 +15,7 @@
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
 
-        <activity android:name=".list.view.ListActivity">
+        <activity android:name=".list.view.activity.ListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
