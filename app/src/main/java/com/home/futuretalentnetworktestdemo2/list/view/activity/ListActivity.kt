@@ -8,6 +8,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import com.home.futuretalentnetworktestdemo2.R
 import com.home.futuretalentnetworktestdemo2.common.base.BaseActivity
+import com.home.futuretalentnetworktestdemo2.common.extension.click
 import com.home.futuretalentnetworktestdemo2.common.extension.setShapeBackground
 import com.home.futuretalentnetworktestdemo2.databinding.ActivityListBinding
 import com.home.futuretalentnetworktestdemo2.detail.view.activity.DetailActivity
@@ -18,6 +19,7 @@ import com.home.futuretalentnetworktestdemo2.list.model.viewstate.NetworkError
 import com.home.futuretalentnetworktestdemo2.list.model.viewstate.Success
 import com.home.futuretalentnetworktestdemo2.list.view.adapter.ListAdapter
 import com.home.futuretalentnetworktestdemo2.list.viewmodel.ListViewModel
+import com.home.futuretalentnetworktestdemo2.pagination.view.activity.PaginationActivity
 import javax.inject.Inject
 
 class ListActivity : BaseActivity() {
@@ -37,6 +39,7 @@ class ListActivity : BaseActivity() {
         binding = binding(this, R.layout.activity_list)
         binding.textViewPagination.apply {
             setShapeBackground()
+            click { PaginationActivity.start(this@ListActivity) }
         }
     }
 

@@ -13,7 +13,7 @@ import javax.inject.Singleton
 object NetworkModule {
 
     private const val BASE_URL = "https://api.github.com/"
-    const val TOKEN = ""
+    const val TOKEN = "Please fill in your token"
 
     @JvmStatic
     @Provides

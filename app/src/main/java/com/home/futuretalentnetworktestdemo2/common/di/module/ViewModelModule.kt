@@ -6,6 +6,7 @@ import com.home.futuretalentnetworktestdemo2.common.di.other.ViewModelFactory
 import com.home.futuretalentnetworktestdemo2.common.di.other.ViewModelKey
 import com.home.futuretalentnetworktestdemo2.detail.viewmodel.DetailViewModel
 import com.home.futuretalentnetworktestdemo2.list.viewmodel.ListViewModel
+import com.home.futuretalentnetworktestdemo2.pagination.viewmodel.PaginationViewModel
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
@@ -25,4 +26,9 @@ abstract class ViewModelModule {
     @IntoMap
     @ViewModelKey(DetailViewModel::class)
     abstract fun bindDetailViewModel(detailViewModel: DetailViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(PaginationViewModel::class)
+    abstract fun bindPaginationViewModel(paginationViewModel: PaginationViewModel): ViewModel
 }
